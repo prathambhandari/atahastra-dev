@@ -18,14 +18,9 @@ const offerings = [
       'iOS and Android apps built from your idea, through design, to launch on the app stores.',
   },
   {
-    title: 'We build in Framer',
-    description:
-      'Marketing sites and landing pages in Framer with custom design, CMS, and smooth motion built in.',
-  },
-  {
     title: 'We ship with no-code',
     description:
-      'Landing pages, dashboards, and tools on Webflow and other platforms, live in days.',
+      'Landing pages, dashboards, and tools on Webflow, Framer, and other platforms, live in days.',
   },
 ]
 
