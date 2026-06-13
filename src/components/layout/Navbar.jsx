@@ -1,37 +1,41 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Logo from '../ui/Logo'
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', to: '/#services' },
+  { label: 'Work', to: '/#work' },
+  { label: 'About Us', to: '/about' },
 ]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  const linkClass = (to) => {
+    const isAbout = to === '/about' && pathname === '/about'
+    return `text-sm transition-colors ${
+      isAbout ? 'text-foreground' : 'text-gray-muted hover:text-foreground'
+    }`
+  }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-page/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 bg-page/95 backdrop-blur-sm">
       <div className="section-container flex h-16 items-center justify-between md:h-20">
-        <Logo />
+        <Logo size="lg" />
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-gray-muted transition-colors hover:text-foreground"
-            >
+            <Link key={link.to} to={link.to} className={linkClass(link.to)}>
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-page transition-opacity hover:opacity-90"
           >
             Start a Project
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -48,25 +52,25 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-border bg-page px-6 py-4 md:hidden">
+        <nav className="bg-page px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-gray-muted hover:text-foreground"
+              <Link
+                key={link.to}
+                to={link.to}
+                className={linkClass(link.to)}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               className="rounded-full bg-foreground px-5 py-2.5 text-center text-sm font-medium text-page"
               onClick={() => setOpen(false)}
             >
               Start a Project
-            </a>
+            </Link>
           </div>
         </nav>
       )}

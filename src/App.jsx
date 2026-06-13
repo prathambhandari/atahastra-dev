@@ -1,23 +1,17 @@
-import Navbar from './components/layout/Navbar'
-import Footer from './components/layout/Footer'
-import WhatWeDo from './components/sections/WhatWeDo'
-import Portfolio from './components/sections/Portfolio'
-import Services from './components/sections/Services'
-import Process from './components/sections/Process'
-import CTA from './components/sections/CTA'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import About from './pages/About'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-page">
-      <Navbar />
-      <main>
-        <WhatWeDo />
-        <Services />
-        <Portfolio />
-        <Process />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
