@@ -10,7 +10,7 @@ const services = [
     ),
     title: 'Web Development',
     description:
-      'Custom websites and web apps built with React, Next.js, and modern frameworks — fast, secure, and SEO-ready.',
+      'Custom websites and web apps built with React, Next.js, and modern frameworks. Fast, secure, and SEO-ready.',
   },
   {
     icon: (
@@ -40,7 +40,7 @@ const services = [
     ),
     title: 'Mobile App Development',
     description:
-      'Native and cross-platform apps for iOS and Android — from concept to App Store launch.',
+      'Native and cross-platform apps for iOS and Android, from concept to App Store launch.',
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const services = [
     ),
     title: 'No-Code Solutions',
     description:
-      'Webflow, Framer, Bubble, and Notion-powered builds that ship in days — no dev team required.',
+      'Webflow, Framer, Bubble, and Notion-powered builds that ship in days without a full dev team.',
   },
   {
     icon: (
@@ -66,13 +66,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="section-container py-20 md:py-28">
+    <section id="services" className="section-container pt-8 pb-20 md:pt-10 md:pb-28">
         <SectionLabel>Our Services</SectionLabel>
         <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
           Everything you need to launch and grow online.
         </h2>
         <p className="mt-4 max-w-2xl text-base text-gray-muted md:text-lg">
-          From pixel-perfect designs to production-ready code — one team, end to end.
+          From pixel-perfect designs to production-ready code. One team, end to end.
         </p>
 
         <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">

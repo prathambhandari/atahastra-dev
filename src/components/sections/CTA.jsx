@@ -8,7 +8,7 @@ export default function CTA() {
           Ready to build something great?
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-base text-gray-muted md:text-lg">
-          From landing pages to full-scale apps — let&apos;s turn your vision into
+          From landing pages to full-scale apps, we turn your vision into
           a product your users will love.
         </p>
         <div className="mt-8">

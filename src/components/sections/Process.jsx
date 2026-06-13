@@ -10,7 +10,7 @@ const steps = [
     ),
     title: 'Discover & Strategy',
     description:
-      'We learn your business, audience, and goals — then define a clear roadmap before any design or code begins.',
+      'We learn your business, audience, and goals, then define a clear roadmap before any design or code begins.',
   },
   {
     icon: (
@@ -20,7 +20,7 @@ const steps = [
     ),
     title: 'Design & Prototype',
     description:
-      'Wireframes, UI designs, and interactive prototypes — refined with your feedback until every screen feels right.',
+      'Wireframes, UI designs, and interactive prototypes, refined with your feedback until every screen feels right.',
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const steps = [
     ),
     title: 'Build & Launch',
     description:
-      'Development, QA, and deployment — we ship polished products on schedule, with full handoff documentation.',
+      'Development, QA, and deployment. We ship polished products on schedule with full handoff documentation.',
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const steps = [
     ),
     title: 'Dedicated Team',
     description:
-      'A single point of contact and a cross-functional squad — designers, developers, and strategists aligned on your project.',
+      'A single point of contact and a cross-functional squad of designers, developers, and strategists aligned on your project.',
   },
   {
     icon: (
@@ -60,7 +60,7 @@ const steps = [
     ),
     title: 'Quality Assurance',
     description:
-      'Rigorous testing across devices and browsers — so your users get a flawless experience every time.',
+      'Rigorous testing across devices and browsers so your users get a flawless experience every time.',
   },
 ]
 
@@ -73,7 +73,7 @@ export default function Process() {
           A proven process from idea to launch.
         </h2>
         <p className="mt-4 max-w-2xl text-base text-gray-muted md:text-lg">
-          Transparent, collaborative, and built for speed — so you always know
+          Transparent, collaborative, and built for speed, so you always know
           where your project stands and what comes next.
         </p>
 

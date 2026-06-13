@@ -4,7 +4,7 @@ const offerings = [
   {
     title: 'We build your website',
     description:
-      'Custom websites and web apps — fast, responsive, and ready to grow with your business.',
+      'Custom websites and web apps that are fast, responsive, and ready to grow with your business.',
   },
   {
     title: 'We design your experience',
@@ -19,19 +19,19 @@ const offerings = [
   {
     title: 'We ship with no-code',
     description:
-      'Landing pages, dashboards, and tools on Webflow, Framer, and other platforms — live in days.',
+      'Landing pages, dashboards, and tools on Webflow, Framer, and other platforms, live in days.',
   },
 ]
 
 export default function WhatWeDo() {
   return (
-    <section id="services" className="section-container pt-8 pb-16 md:pt-10 md:pb-20">
+    <section className="section-container pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="max-w-2xl">
         <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
           We build digital products for your business.
         </h2>
         <p className="mt-4 text-base leading-relaxed text-gray-muted md:text-lg">
-          Websites, design, mobile apps, and no-code — one team from start to finish.
+          Websites, design, mobile apps, and no-code. One team from start to finish.
         </p>
       </div>
 

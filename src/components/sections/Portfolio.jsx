@@ -13,7 +13,7 @@ const stories = [
   },
   {
     tag: 'Mobile App',
-    title: 'Fitness App — 50K+ Downloads',
+    title: 'Fitness App, 50K+ Downloads',
     description: 'Cross-platform Flutter app shipped in 12 weeks.',
   },
 ]
