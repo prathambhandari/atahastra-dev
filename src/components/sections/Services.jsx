@@ -1,5 +1,6 @@
 import SectionLabel from '../ui/SectionLabel'
 import Button from '../ui/Button'
+import Reveal from '../ui/Reveal'
 
 const services = [
   {
@@ -50,7 +51,17 @@ const services = [
     ),
     title: 'No-Code Solutions',
     description:
-      'Webflow, Framer, Bubble, and Notion-powered builds that ship in days without a full dev team.',
+      'Webflow, Bubble, and Notion-powered builds that ship in days without a full dev team.',
+  },
+  {
+    icon: (
+      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+      </svg>
+    ),
+    title: 'Framer',
+    description:
+      'High-performance marketing sites and landing pages in Framer with custom design, CMS, and polished motion.',
   },
   {
     icon: (
@@ -76,14 +87,16 @@ export default function Services() {
         </p>
 
         <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div key={service.title}>
-              <div className="mb-4 text-foreground">{service.icon}</div>
-              <h3 className="text-lg font-bold text-foreground">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-muted md:text-base">
-                {service.description}
-              </p>
-            </div>
+          {services.map((service, index) => (
+            <Reveal key={service.title} delay={index * 60}>
+              <div>
+                <div className="mb-4 text-foreground">{service.icon}</div>
+                <h3 className="text-lg font-bold text-foreground">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-muted md:text-base">
+                  {service.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
 

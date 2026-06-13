@@ -5,9 +5,9 @@ import { BOOKING_URL } from '../../data/booking'
 
 const companyLinks = [
   { label: 'About Us', to: '/about' },
-  { label: 'Careers', to: '/about' },
+  { label: 'Careers', to: '/careers' },
   { label: 'Contact Us', href: BOOKING_URL },
-  { label: 'Privacy Policy', to: '/about' },
+  { label: 'Privacy Policy', to: '/privacy-policy' },
 ]
 
 const linkClass = 'text-sm text-gray-muted transition-colors hover:text-foreground'
@@ -15,7 +15,7 @@ const linkClass = 'text-sm text-gray-muted transition-colors hover:text-foregrou
 export default function Footer() {
   return (
     <footer className="bg-page">
-      <div className="section-container py-12 md:py-16">
+      <div className="section-container pb-12 pt-8 md:pb-16 md:pt-10">
         <div className="flex flex-col items-start justify-between gap-4 border-b border-border pb-8 md:flex-row md:items-center">
           <Logo />
           <p className="text-xs font-medium uppercase tracking-widest text-gray-muted">

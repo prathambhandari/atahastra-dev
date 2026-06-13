@@ -1,7 +1,9 @@
 import SocialLinks from '../components/ui/SocialLinks'
+import Reveal from '../components/ui/Reveal'
 
 export default function About() {
   return (
+    <Reveal>
     <div className="section-container pt-8 pb-20 md:pt-10 md:pb-28">
       <div className="max-w-2xl">
         <h1 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
@@ -26,5 +28,6 @@ export default function About() {
         <SocialLinks className="mt-6" />
       </div>
     </div>
+    </Reveal>
   )
 }
