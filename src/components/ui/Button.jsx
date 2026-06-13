@@ -11,13 +11,27 @@ export default function Button({
   children,
   variant = 'primary',
   className = '',
+  href,
   ...props
 }) {
+  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 ${variants[variant]} ${className}`
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        {...props}
+      >
+        {children}
+      </a>
+    )
+  }
+
   return (
-    <button
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 ${variants[variant]} ${className}`}
-      {...props}
-    >
+    <button className={classes} {...props}>
       {children}
     </button>
   )

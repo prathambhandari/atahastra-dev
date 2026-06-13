@@ -1,32 +1,16 @@
 import { Link } from 'react-router-dom'
 import Logo from '../ui/Logo'
 import SocialLinks from '../ui/SocialLinks'
+import { BOOKING_URL } from '../../data/booking'
 
-const footerLinks = {
-  Services: [
-    { label: 'Web Development', to: '/#services' },
-    { label: 'Web Design', to: '/#services' },
-    { label: 'UI/UX Design', to: '/#services' },
-    { label: 'Mobile App Development', to: '/#services' },
-    { label: 'No-Code Solutions', to: '/#services' },
-  ],
-  Company: [
-    { label: 'About Us', to: '/about' },
-    { label: 'Careers', to: '/about' },
-    { label: 'Contact Us', to: '/#contact' },
-    { label: 'Privacy Policy', to: '/about' },
-  ],
-  Work: [
-    { label: 'Case Studies', to: '/#work' },
-    { label: 'Portfolio', to: '/#work' },
-    { label: 'Testimonials', to: '/#work' },
-  ],
-  Resources: [
-    { label: 'Blog', to: '/about' },
-    { label: 'Design Tips', to: '/about' },
-    { label: 'No-Code Guides', to: '/about' },
-  ],
-}
+const companyLinks = [
+  { label: 'About Us', to: '/about' },
+  { label: 'Careers', to: '/about' },
+  { label: 'Contact Us', href: BOOKING_URL },
+  { label: 'Privacy Policy', to: '/about' },
+]
+
+const linkClass = 'text-sm text-gray-muted transition-colors hover:text-foreground'
 
 export default function Footer() {
   return (
@@ -39,27 +23,25 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 py-10 md:grid-cols-4 md:gap-12">
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-wider text-foreground">
-                {title}
-              </h4>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.to}
-                      className="text-sm text-gray-muted transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 py-8">
+          {companyLinks.map((link) =>
+            link.href ? (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.label} to={link.to} className={linkClass}>
+                {link.label}
+              </Link>
+            ),
+          )}
+        </nav>
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-border pt-8 md:flex-row md:items-center">
           <p className="text-sm text-gray-muted">

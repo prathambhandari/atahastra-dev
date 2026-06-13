@@ -1,4 +1,5 @@
 import Button from '../ui/Button'
+import { BOOKING_URL } from '../../data/booking'
 
 const offerings = [
   {
@@ -49,7 +50,7 @@ export default function WhatWeDo() {
       </ul>
 
       <div className="mt-10">
-        <Button>Start a project</Button>
+        <Button href={BOOKING_URL}>Start a project</Button>
       </div>
     </section>
   )

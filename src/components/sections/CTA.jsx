@@ -1,4 +1,5 @@
 import Button from '../ui/Button'
+import { BOOKING_URL } from '../../data/booking'
 
 export default function CTA() {
   return (
@@ -12,7 +13,7 @@ export default function CTA() {
           a product your users will love.
         </p>
         <div className="mt-8">
-          <Button>Talk to our team</Button>
+          <Button href={BOOKING_URL}>Talk to our team</Button>
         </div>
       </div>
     </section>

@@ -66,8 +66,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 md:py-28">
-      <div className="section-container">
+    <section id="process" className="section-container pt-8 pb-20 md:pt-10 md:pb-28">
         <SectionLabel>How We Work</SectionLabel>
         <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
           A proven process from idea to launch.
@@ -92,7 +91,6 @@ export default function Process() {
         <div className="mt-14">
           <Button variant="ghost">Learn about our process</Button>
         </div>
-      </div>
     </section>
   )
 }

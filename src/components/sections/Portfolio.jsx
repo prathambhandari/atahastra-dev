@@ -1,22 +1,5 @@
 import SectionLabel from '../ui/SectionLabel'
-
-const stories = [
-  {
-    tag: 'Web Development',
-    title: 'E-Commerce Platform Redesign',
-    description: '2× conversions in 90 days with a custom React storefront.',
-  },
-  {
-    tag: 'UI/UX Design',
-    title: 'SaaS Dashboard for FinTech',
-    description: '45% less onboarding drop-off after a full UX overhaul.',
-  },
-  {
-    tag: 'Mobile App',
-    title: 'Fitness App, 50K+ Downloads',
-    description: 'Cross-platform Flutter app shipped in 12 weeks.',
-  },
-]
+import clientStories from '../../data/clientStories'
 
 export default function Portfolio() {
   return (
@@ -26,14 +9,16 @@ export default function Portfolio() {
         Work that performs where it matters most.
       </h2>
       <p className="mt-4 max-w-xl text-base text-gray-muted md:text-lg">
-        Real projects. Measurable outcomes.
+        Real projects we've designed, built, and shipped.
       </p>
 
       <ul className="mt-12 divide-y divide-border">
-        {stories.map((story) => (
+        {clientStories.map((story) => (
           <li key={story.title}>
             <a
-              href="#"
+              href={story.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block py-6 transition-opacity hover:opacity-70 md:py-8"
             >
               <p className="text-sm text-gray-muted">{story.tag}</p>

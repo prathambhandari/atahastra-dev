@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../ui/Logo'
+import { BOOKING_URL } from '../../data/booking'
 
 const navLinks = [
   { label: 'Services', to: '/#services' },
-  { label: 'Work', to: '/#work' },
+  { label: 'Work', to: '/#process' },
   { label: 'About Us', to: '/about' },
 ]
 
@@ -30,12 +31,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/#contact"
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-page transition-opacity hover:opacity-90"
           >
             Start a Project
-          </Link>
+          </a>
         </nav>
 
         <button
@@ -64,13 +67,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/#contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-foreground px-5 py-2.5 text-center text-sm font-medium text-page"
               onClick={() => setOpen(false)}
             >
               Start a Project
-            </Link>
+            </a>
           </div>
         </nav>
       )}
