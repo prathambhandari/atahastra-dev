@@ -66,8 +66,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="border-y border-border bg-surface py-20 md:py-28">
-      <div className="section-container">
+    <section className="section-container py-20 md:py-28">
         <SectionLabel>Our Services</SectionLabel>
         <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
           Everything you need to launch and grow online.
@@ -91,7 +90,6 @@ export default function Services() {
         <div className="mt-14">
           <Button variant="ghost">Explore all services</Button>
         </div>
-      </div>
     </section>
   )
 }
