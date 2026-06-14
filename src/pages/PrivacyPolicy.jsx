@@ -1,4 +1,5 @@
 import { BOOKING_URL } from '../data/booking'
+import { CONTACT_EMAIL } from '../data/contact'
 import Reveal from '../components/ui/Reveal'
 
 export default function PrivacyPolicy() {
@@ -95,7 +96,14 @@ export default function PrivacyPolicy() {
             <p className="mt-3">
               Depending on where you live, you may have the right to access, correct, or delete
               your personal information, or to object to certain processing. To make a request,
-              contact us using the details below.
+              email us at{' '}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-foreground underline underline-offset-4 transition-opacity hover:opacity-70"
+              >
+                {CONTACT_EMAIL}
+              </a>
+              .
             </p>
           </section>
 
@@ -104,8 +112,18 @@ export default function PrivacyPolicy() {
               Contact us
             </h2>
             <p className="mt-3">
-              If you have questions about this Privacy Policy or how we handle your data, reach
-              out through our{' '}
+              If you have questions about this Privacy Policy or how we handle your data, email us
+              at{' '}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-foreground underline underline-offset-4 transition-opacity hover:opacity-70"
+              >
+                {CONTACT_EMAIL}
+              </a>
+              .
+            </p>
+            <p className="mt-3">
+              For project inquiries, you can also use our{' '}
               <a
                 href={BOOKING_URL}
                 target="_blank"

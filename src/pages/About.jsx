@@ -1,5 +1,6 @@
 import SocialLinks from '../components/ui/SocialLinks'
 import Reveal from '../components/ui/Reveal'
+import { CONTACT_EMAIL } from '../data/contact'
 
 export default function About() {
   return (
@@ -20,11 +21,17 @@ export default function About() {
         </p>
       </div>
 
-      <div className="mt-16 border-t border-border pt-16">
+      <div id="contact" className="mt-16 border-t border-border pt-16">
         <h2 className="text-2xl font-bold text-foreground md:text-3xl">Connect with us</h2>
         <p className="mt-3 max-w-xl text-base text-gray-muted">
-          Follow along or reach out on social media.
+          Follow along, email us, or reach out on social media.
         </p>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="mt-4 inline-block text-base text-foreground transition-opacity hover:opacity-70"
+        >
+          {CONTACT_EMAIL}
+        </a>
         <SocialLinks className="mt-6" />
       </div>
     </div>

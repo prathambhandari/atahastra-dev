@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
 import Logo from '../ui/Logo'
 import SocialLinks from '../ui/SocialLinks'
-import { BOOKING_URL } from '../../data/booking'
 
 const companyLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Careers', to: '/careers' },
-  { label: 'Contact Us', href: BOOKING_URL },
+  { label: 'Contact Us', to: '/about#contact' },
   { label: 'Privacy Policy', to: '/privacy-policy' },
 ]
 
