@@ -26,17 +26,17 @@ const offerings = [
 export default function WhatWeDo() {
   return (
     <section className="section-container pt-8 pb-16 md:pt-10 md:pb-24">
-      <div className="relative overflow-hidden rounded-[1.75rem] md:rounded-[2rem]">
+      <div className="relative overflow-hidden rounded-2xl border border-white/5 md:rounded-[2rem]">
         <img
           src="/hero.png"
           alt=""
           aria-hidden="true"
           loading="eager"
           decoding="async"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center blur-[2px]"
+          className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.35] saturate-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-950/40 via-black/60 to-black/90" />
 
         <div className="relative z-10 px-5 py-10 sm:px-6 md:px-8 md:py-14 lg:px-10 lg:py-16">
           <Reveal>
