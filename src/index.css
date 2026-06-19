@@ -7,6 +7,7 @@
   --border-color: #2e2e2e;
   --foreground: #ffffff;
   --muted: #a3a3a3;
+  --accent: #ff7a00;
 }
 
 @theme {
@@ -16,6 +17,7 @@
   --color-border: var(--border-color);
   --color-foreground: var(--foreground);
   --color-gray-muted: var(--muted);
+  --color-accent: var(--accent);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
@@ -64,6 +66,16 @@
   }
   to {
     transform: translateX(100%);
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
@@ -131,6 +143,22 @@
     );
   }
 
+  .hero-float {
+    animation: heroFloat 6s ease-in-out infinite;
+  }
+
+  .hero-float-delay-1 {
+    animation-delay: 1s;
+  }
+
+  .hero-float-delay-2 {
+    animation-delay: 2s;
+  }
+
+  .hero-float-delay-3 {
+    animation-delay: 3s;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .marquee-track {
       animation: none;
@@ -160,6 +188,10 @@
 
     .faq-icon {
       transition: none;
+    }
+
+    .hero-float {
+      animation: none;
     }
   }
 }

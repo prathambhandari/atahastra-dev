@@ -1,4 +1,5 @@
 import Reveal from '../ui/Reveal'
+import HeroVisual from './HeroVisual'
 
 const offerings = [
   {
@@ -25,45 +26,33 @@ const offerings = [
 
 export default function WhatWeDo() {
   return (
-    <section className="section-container pt-8 pb-16 md:pt-10 md:pb-24">
-      <div className="relative overflow-hidden rounded-2xl border border-white/5 md:rounded-[2rem]">
-        <img
-          src="/hero.png"
-          alt=""
-          aria-hidden="true"
-          loading="eager"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.35] saturate-75"
-        />
-        <div className="absolute inset-0 bg-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-950/40 via-black/60 to-black/90" />
-
-        <div className="relative z-10 px-5 py-10 sm:px-6 md:px-8 md:py-14 lg:px-10 lg:py-16">
+    <section className="section-container pt-8 pb-16 md:pt-12 md:pb-24">
+      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 xl:gap-12">
+        <div>
           <Reveal>
-            <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-muted">
-                What we do
-              </p>
-              <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
-                We build digital products for your business.
-              </h2>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-muted md:text-base">
-                Websites, design, mobile apps, and no-code. One team from start to finish.
-              </p>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">
+              What we do
+            </p>
+            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
+              We build digital products for your business.
+            </h1>
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-gray-muted md:text-base">
+              Websites, design, mobile apps, and no-code. One team from start to finish.
+            </p>
+            <div className="mt-8 h-px w-full max-w-md bg-accent/40" />
           </Reveal>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4 lg:gap-4">
+          <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             {offerings.map((item, index) => (
               <Reveal key={item.title} delay={index * 70}>
-                <article className="flex h-full flex-col py-4 md:py-5">
-                  <span className="text-xs font-medium tabular-nums text-gray-muted">
+                <article>
+                  <span className="text-xs font-semibold tabular-nums text-accent">
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="mt-2 text-base font-bold leading-snug text-foreground md:text-[1.05rem]">
+                  <h2 className="mt-2 text-base font-bold leading-snug text-foreground">
                     {item.title}
-                  </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-muted md:text-sm">
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-muted">
                     {item.description}
                   </p>
                 </article>
@@ -71,6 +60,12 @@ export default function WhatWeDo() {
             ))}
           </div>
         </div>
+
+        <Reveal delay={120} className="flex w-full justify-center">
+          <div className="lg:-translate-x-6 xl:-translate-x-10">
+            <HeroVisual />
+          </div>
+        </Reveal>
       </div>
     </section>
   )
