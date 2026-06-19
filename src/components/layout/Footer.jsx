@@ -6,7 +6,6 @@ const companyLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Careers', to: '/careers' },
   { label: 'Contact Us', to: '/about#contact' },
-  { label: 'Privacy Policy', to: '/privacy-policy' },
 ]
 
 const linkClass = 'text-sm text-gray-muted transition-colors hover:text-foreground'

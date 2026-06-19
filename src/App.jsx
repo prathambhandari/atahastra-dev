@@ -5,7 +5,6 @@ import PageFallback from './components/ui/PageFallback'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const Careers = lazy(() => import('./pages/Careers'))
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Route>
         </Routes>
       </Suspense>

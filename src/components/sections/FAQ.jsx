@@ -42,9 +42,6 @@ export default function FAQ() {
       <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
         Common questions, answered.
       </h2>
-      <p className="mt-4 max-w-xl text-base text-gray-muted md:text-lg">
-        Everything you need to know before we start working together.
-      </p>
 
       <div className="mt-12 w-full border-t border-border">
         {faqItems.map((item, index) => (

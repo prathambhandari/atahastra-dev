@@ -1,37 +1,30 @@
 import SectionLabel from '../ui/SectionLabel'
-import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 
 const services = [
   {
     title: 'Web Development',
-    description:
-      'Custom websites and web apps built with React, Next.js, and modern frameworks. Fast, secure, and SEO-ready.',
+    description: 'Custom sites and apps with React and Next.js.',
   },
   {
     title: 'Web Design',
-    description:
-      'Visually striking, brand-aligned website designs that capture attention and guide users toward action.',
+    description: 'Striking designs aligned with your brand.',
   },
   {
     title: 'UI/UX Design',
-    description:
-      'User research, wireframes, and interactive prototypes that make every interaction intuitive and delightful.',
+    description: 'Wireframes and prototypes for smooth user flows.',
   },
   {
     title: 'Mobile App Development',
-    description:
-      'Native and cross-platform apps for iOS and Android, from concept to App Store launch.',
+    description: 'iOS and Android apps, concept to launch.',
   },
   {
     title: 'No-Code Solutions',
-    description:
-      'Webflow, Framer, Bubble, and Notion-powered builds that ship in days without a full dev team.',
+    description: 'Webflow and Framer builds that ship fast.',
   },
   {
     title: 'WordPress & Shopify',
-    description:
-      'WordPress sites and Shopify stores with custom themes, plugins, product setup, and content management built to launch and grow online.',
+    description: 'WordPress and Shopify stores ready to launch.',
   },
 ]
 
@@ -42,9 +35,6 @@ export default function Services() {
       <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
         Everything you need to launch and grow online.
       </h2>
-      <p className="mt-4 max-w-2xl text-base text-gray-muted md:text-lg">
-        From pixel-perfect designs to production-ready code. One team, end to end.
-      </p>
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
         {services.map((service, index) => (
@@ -70,10 +60,6 @@ export default function Services() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      <div className="mt-14">
-        <Button variant="ghost">Explore all services</Button>
       </div>
     </section>
   )

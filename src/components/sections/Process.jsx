@@ -1,37 +1,30 @@
 import SectionLabel from '../ui/SectionLabel'
-import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 
 const steps = [
   {
     title: 'Discover & Strategy',
-    description:
-      'We learn your business, audience, and goals, then define a clear roadmap before any design or code begins.',
+    description: 'We learn your goals and define a clear roadmap.',
   },
   {
     title: 'Design & Prototype',
-    description:
-      'Wireframes, UI designs, and interactive prototypes, refined with your feedback until every screen feels right.',
+    description: 'Wireframes and UI refined with your feedback.',
   },
   {
     title: 'Build & Launch',
-    description:
-      'Development, QA, and deployment. We ship polished products on schedule with full handoff documentation.',
+    description: 'Development, QA, and deployment on schedule.',
   },
   {
     title: 'Grow & Optimize',
-    description:
-      'Post-launch analytics, A/B testing, and iterative improvements to keep your product performing at its best.',
+    description: 'Analytics and updates to keep performance strong.',
   },
   {
     title: 'Dedicated Team',
-    description:
-      'A single point of contact and a cross-functional squad of designers, developers, and strategists aligned on your project.',
+    description: 'One contact and a full design and dev squad.',
   },
   {
     title: 'Quality Assurance',
-    description:
-      'Rigorous testing across devices and browsers so your users get a flawless experience every time.',
+    description: 'Tested across devices for a flawless experience.',
   },
 ]
 
@@ -42,10 +35,6 @@ export default function Process() {
       <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
         A proven process from idea to launch.
       </h2>
-      <p className="mt-4 max-w-2xl text-base text-gray-muted md:text-lg">
-        Transparent, collaborative, and built for speed, so you always know
-        where your project stands and what comes next.
-      </p>
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
         {steps.map((step, index) => (
@@ -71,10 +60,6 @@ export default function Process() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      <div className="mt-14">
-        <Button variant="ghost">Learn about our process</Button>
       </div>
     </section>
   )
