@@ -4,27 +4,45 @@ import Reveal from '../ui/Reveal'
 const steps = [
   {
     title: 'Discover & Strategy',
-    description: 'We learn your goals and define a clear roadmap.',
+    description:
+      'We start by learning your business, audience, and goals. Together we define scope, priorities, and a clear roadmap before any design or code begins.',
+    image:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop',
   },
   {
     title: 'Design & Prototype',
-    description: 'Wireframes and UI refined with your feedback.',
+    description:
+      'Wireframes, UI designs, and interactive prototypes bring your product to life. We refine every screen with your feedback until the experience feels right.',
+    image:
+      'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80&auto=format&fit=crop',
   },
   {
     title: 'Build & Launch',
-    description: 'Development, QA, and deployment on schedule.',
+    description:
+      'Our team handles development, QA, and deployment with care. We ship polished products on schedule and hand off everything you need to run with confidence.',
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop',
   },
   {
     title: 'Grow & Optimize',
-    description: 'Analytics and updates to keep performance strong.',
+    description:
+      'Launch is just the beginning. We track performance, run tests, and make iterative improvements so your product keeps getting better over time.',
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
   },
   {
     title: 'Dedicated Team',
-    description: 'One contact and a full design and dev squad.',
+    description:
+      'You get one point of contact and a cross-functional squad aligned on your project. Designers, developers, and strategists work as one team from day one.',
+    image:
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop',
   },
   {
     title: 'Quality Assurance',
-    description: 'Tested across devices for a flawless experience.',
+    description:
+      'Every build goes through rigorous testing across devices and browsers. We catch issues early so your users get a smooth, reliable experience every time.',
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80&auto=format&fit=crop',
   },
 ]
 
@@ -39,17 +57,17 @@ export default function Process() {
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
         {steps.map((step, index) => (
           <Reveal key={step.title} delay={index * 60}>
-            <article className="group relative h-full overflow-hidden rounded-2xl border border-white/5">
+            <article className="group relative h-full min-h-60 overflow-hidden rounded-2xl border border-white/5 md:min-h-72">
               <img
-                src="/hero.png"
+                src={step.image}
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 h-full w-full object-cover brightness-[0.35] saturate-75 transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full scale-110 object-cover blur-[3px] brightness-[0.55] saturate-90 transition-transform duration-500 group-hover:scale-[1.15]"
               />
-              <div className="absolute inset-0 bg-black/80" />
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-950/40 via-black/60 to-black/90" />
+              <div className="absolute inset-0 bg-black/55" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-950/25 via-black/35 to-black/65" />
 
               <div className="relative z-10 p-6 md:p-8">
                 <h3 className="text-lg font-bold text-foreground">{step.title}</h3>
