@@ -27,18 +27,15 @@ const offerings = [
 export default function WhatWeDo() {
   return (
     <section className="section-container pt-8 pb-16 md:pt-12 md:pb-24">
-      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 xl:gap-12">
+      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 xl:gap-16">
         <div>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">
               What we do
             </p>
-            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
+            <h1 className="mt-4 max-w-xl text-2xl font-bold leading-snug tracking-tight text-foreground sm:max-w-2xl sm:text-3xl sm:leading-tight md:text-4xl lg:max-w-3xl lg:text-5xl">
               We build digital products for your business.
             </h1>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-gray-muted md:text-base">
-              Websites, design, mobile apps, and no-code. One team from start to finish.
-            </p>
             <div className="mt-8 h-px w-full max-w-md bg-accent/40" />
           </Reveal>
 
@@ -62,9 +59,7 @@ export default function WhatWeDo() {
         </div>
 
         <Reveal delay={120} className="flex w-full justify-center">
-          <div className="lg:-translate-x-6 xl:-translate-x-10">
-            <HeroVisual />
-          </div>
+          <HeroVisual />
         </Reveal>
       </div>
     </section>

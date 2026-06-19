@@ -8,7 +8,7 @@ const companyLinks = [
   { label: 'Contact Us', to: '/about#contact' },
 ]
 
-const linkClass = 'text-sm text-gray-muted transition-colors hover:text-foreground'
+const linkClass = 'cursor-pointer text-sm text-gray-muted transition-colors hover:text-foreground'
 
 export default function Footer() {
   return (

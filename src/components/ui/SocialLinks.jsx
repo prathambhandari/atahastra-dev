@@ -10,7 +10,7 @@ export default function SocialLinks({ className = '' }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.label}
-          className="text-gray-muted transition-colors hover:text-foreground"
+          className="cursor-pointer text-gray-muted transition-colors hover:text-foreground"
         >
           <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
             <path d={link.path} />

@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const linkClass = (to) => {
     const isAbout = to === '/about' && pathname === '/about'
-    return `text-sm transition-colors ${
+    return `cursor-pointer text-sm transition-colors ${
       isAbout ? 'text-foreground' : 'text-gray-muted hover:text-foreground'
     }`
   }
@@ -35,15 +35,15 @@ export default function Navbar() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-page transition-opacity hover:opacity-90"
+            className="cursor-pointer rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-page transition-opacity hover:opacity-90"
           >
-            Start a Project
+            Schedule a Call
           </a>
         </nav>
 
         <button
           type="button"
-          className="flex flex-col gap-1.5 p-2 md:hidden"
+          className="flex cursor-pointer flex-col gap-1.5 p-2 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
@@ -71,10 +71,10 @@ export default function Navbar() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-foreground px-5 py-2.5 text-center text-sm font-medium text-page"
+              className="cursor-pointer rounded-full bg-foreground px-5 py-2.5 text-center text-sm font-medium text-page"
               onClick={() => setOpen(false)}
             >
-              Start a Project
+              Schedule a Call
             </a>
           </div>
         </nav>

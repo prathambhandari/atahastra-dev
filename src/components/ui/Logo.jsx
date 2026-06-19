@@ -20,7 +20,7 @@ export default function Logo({ className = '', showText = true, size = 'md' }) {
   }
 
   return (
-    <Link to="/" className={`flex items-center gap-3 ${className}`}>
+    <Link to="/" className={`flex cursor-pointer items-center gap-3 ${className}`}>
       <img
         src="/logo.png"
         alt="Atahastra"

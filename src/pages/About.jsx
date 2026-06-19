@@ -28,7 +28,7 @@ export default function About() {
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="mt-4 inline-block text-base text-foreground transition-opacity hover:opacity-70"
+          className="mt-4 inline-block cursor-pointer text-base text-foreground transition-opacity hover:opacity-70"
         >
           {CONTACT_EMAIL}
         </a>

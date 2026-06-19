@@ -9,7 +9,7 @@ function FaqItem({ question, answer, isOpen, onToggle }) {
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-6 py-6 pr-4 text-left md:py-8 md:pr-6"
+        className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 pr-4 text-left md:py-8 md:pr-6"
       >
         <span className="text-base font-semibold text-foreground md:text-lg">
           {question}

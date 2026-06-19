@@ -27,7 +27,7 @@ const faqItems = [
   {
     question: 'How do we get started?',
     answer:
-      'Click Start a Project or book a call through our scheduling page. We will learn about your goals, answer your questions, and outline the next steps.',
+      'Click Schedule a Call or book through our scheduling page. We will learn about your goals, answer your questions, and outline the next steps.',
   },
 ]
 
