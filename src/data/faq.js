@@ -2,7 +2,7 @@ const faqItems = [
   {
     question: 'What services do you offer?',
     answer:
-      'We build websites, web apps, UI/UX design, mobile apps, and no-code solutions. We also work with WordPress and Shopify for sites and online stores.',
+      'We build websites, web apps, UI/UX design, and mobile apps. We also work with WordPress and Shopify for sites and online stores.',
   },
   {
     question: 'How long does a typical project take?',

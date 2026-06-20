@@ -4,39 +4,28 @@ import Reveal from '../ui/Reveal'
 const services = [
   {
     title: 'Web Development',
-    description: 'Custom sites and apps with React and Next.js.',
-  },
-  {
-    title: 'Web Design',
-    description: 'Striking designs aligned with your brand.',
-  },
-  {
-    title: 'UI/UX Design',
-    description: 'Wireframes and prototypes for smooth user flows.',
+    description:
+      'Custom websites, WordPress and Shopify stores, and web apps with modern technologies.',
   },
   {
     title: 'Mobile App Development',
     description: 'iOS and Android apps, concept to launch.',
   },
   {
-    title: 'No-Code Solutions',
-    description: 'Webflow and Framer builds that ship fast.',
-  },
-  {
-    title: 'WordPress & Shopify',
-    description: 'WordPress and Shopify stores ready to launch.',
+    title: 'UI/UX Design',
+    description: 'Wireframes and prototypes for smooth user flows.',
   },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="section-container pt-8 pb-20 md:pt-10 md:pb-28">
+    <section id="services" className="section-container pt-8 pb-16 md:pt-10 md:pb-24">
       <SectionLabel>Our Services</SectionLabel>
       <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
         Everything you need to launch and grow online.
       </h2>
 
-      <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+      <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
         {services.map((service, index) => (
           <Reveal key={service.title} delay={index * 60}>
             <article className="group relative h-full overflow-hidden rounded-2xl border border-white/5">

@@ -32,7 +32,7 @@ export default function Testimonials() {
   const items = [...testimonials, ...testimonials]
 
   return (
-    <section className="section-container overflow-hidden py-16 md:py-20">
+    <section className="section-container overflow-hidden pb-16 pt-12 md:pb-20 md:pt-14">
       <SectionLabel>Testimonials</SectionLabel>
       <h2 className="max-w-xl text-2xl font-bold tracking-tight text-foreground md:text-3xl">
         What clients say about working with us.
