@@ -25,6 +25,21 @@ function ChevronDown({ open }) {
   )
 }
 
+function ArrowRight() {
+  return (
+    <svg
+      className="h-5 w-5 shrink-0 text-gray-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-foreground"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  )
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [productsOpen, setProductsOpen] = useState(false)
@@ -94,7 +109,30 @@ export default function Navbar() {
     }
   }, [productsOpen])
 
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.body.style.overflow = ''
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [menuOpen])
+
+  const mobileLinkClass = (to) => {
+    const isAbout = to === '/about' && pathname === '/about'
+    return `cursor-pointer text-lg font-medium transition-colors ${
+      isAbout ? 'text-foreground' : 'text-gray-muted hover:text-foreground'
+    }`
+  }
+
   return (
+    <>
     <header className="relative sticky top-0 z-50 bg-page/95 backdrop-blur-sm">
       <div className="section-container flex h-16 items-center justify-between md:h-20">
         <Logo size="lg" />
@@ -167,7 +205,7 @@ export default function Navbar() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={closeProductsDropdown}
-                      className="group relative block overflow-hidden rounded-2xl border border-white/5"
+                      className="group relative block overflow-hidden rounded-2xl border border-white/5 transition-shadow duration-300 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)]"
                     >
                       <img
                         src="/hero.png"
@@ -181,9 +219,12 @@ export default function Navbar() {
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-950/40 via-black/60 to-black/90" />
 
                       <div className="relative z-10 p-6">
-                        <h3 className="text-base font-bold text-foreground group-hover:text-accent">
-                          {product.name}
-                        </h3>
+                        <div className="flex items-start justify-between gap-4">
+                          <h3 className="text-base font-bold text-gray-muted transition-colors group-hover:text-foreground">
+                            {product.name}
+                          </h3>
+                          <ArrowRight />
+                        </div>
                         <p className="mt-2 text-sm leading-relaxed text-gray-muted">{product.description}</p>
                         <span className="mt-4 inline-block text-sm text-accent">mysimpleresume.com</span>
                       </div>
@@ -196,21 +237,23 @@ export default function Navbar() {
         </div>
       )}
 
+    </header>
+
       {menuOpen && (
-        <nav className="border-t border-border bg-page px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-4">
+        <nav className="fixed inset-x-0 top-16 z-40 flex h-[calc(100dvh-4rem)] w-full flex-col overflow-y-auto bg-page md:hidden">
+          <div className="section-container flex h-full flex-1 flex-col gap-8 py-8 pb-10">
             <div>
               <button
                 type="button"
                 onClick={() => setMobileProductsOpen((current) => !current)}
                 aria-expanded={mobileProductsOpen}
-                className="flex w-full cursor-pointer items-center justify-between text-sm text-gray-muted transition-colors hover:text-foreground"
+                className="flex w-full cursor-pointer items-center justify-between text-lg font-medium text-gray-muted transition-colors hover:text-foreground"
               >
                 Our Products
                 <ChevronDown open={mobileProductsOpen} />
               </button>
               {mobileProductsOpen && (
-                <div className="mt-3 space-y-3 border-l border-border pl-4">
+                <div className="mt-4 space-y-4 border-l border-border pl-4">
                   {products.map((product) => (
                     <a
                       key={product.href}
@@ -221,10 +264,12 @@ export default function Navbar() {
                         setMenuOpen(false)
                         setMobileProductsOpen(false)
                       }}
-                      className="block cursor-pointer"
+                      className="group block cursor-pointer"
                     >
-                      <span className="text-sm font-medium text-foreground">{product.name}</span>
-                      <span className="mt-1 block text-xs text-gray-muted">mysimpleresume.com</span>
+                      <span className="text-base font-medium text-gray-muted transition-colors group-hover:text-foreground">
+                        {product.name}
+                      </span>
+                      <span className="mt-1 block text-sm text-gray-muted">mysimpleresume.com</span>
                     </a>
                   ))}
                 </div>
@@ -235,17 +280,18 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={linkClass(link.to)}
+                className={mobileLinkClass(link.to)}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer rounded-full bg-foreground px-5 py-2.5 text-center text-sm font-medium text-page"
+              className="mt-auto cursor-pointer rounded-full bg-foreground px-5 py-3.5 text-center text-base font-medium text-page"
               onClick={() => setMenuOpen(false)}
             >
               Schedule a Call
@@ -253,6 +299,6 @@ export default function Navbar() {
           </div>
         </nav>
       )}
-    </header>
+    </>
   )
 }
