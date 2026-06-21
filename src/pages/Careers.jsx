@@ -1,7 +1,15 @@
 import SocialLinks from '../components/ui/SocialLinks'
 import Reveal from '../components/ui/Reveal'
+import useSeo from '../hooks/useSeo'
 
 export default function Careers() {
+  useSeo({
+    title: 'Careers at Atahastra | Join Our Digital Agency',
+    description:
+      'Explore careers at Atahastra, a digital agency building websites, apps, and digital products. See current opportunities and follow us to stay updated.',
+    path: '/careers',
+  })
+
   return (
     <Reveal>
     <div className="section-container pt-8 pb-20 md:pt-10 md:pb-28">

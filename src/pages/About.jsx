@@ -1,8 +1,16 @@
 import SocialLinks from '../components/ui/SocialLinks'
 import Reveal from '../components/ui/Reveal'
 import { CONTACT_EMAIL } from '../data/contact'
+import useSeo from '../hooks/useSeo'
 
 export default function About() {
+  useSeo({
+    title: 'About Atahastra | Digital Product Agency',
+    description:
+      'Atahastra is a digital agency focused on websites, UI/UX design, mobile apps, and no-code solutions for startups and growing brands. Get in touch to start your project.',
+    path: '/about',
+  })
+
   return (
     <Reveal>
     <div className="section-container pt-8 pb-20 md:pt-10 md:pb-28">

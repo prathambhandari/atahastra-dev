@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import Reveal from '../components/ui/Reveal'
 import WhatWeDo from '../components/sections/WhatWeDo'
+import useSeo from '../hooks/useSeo'
 
 const Services = lazy(() => import('../components/sections/Services'))
 const Testimonials = lazy(() => import('../components/sections/Testimonials'))
@@ -12,6 +13,13 @@ function SectionFallback() {
 }
 
 export default function Home() {
+  useSeo({
+    title: 'Atahastra | Web Development, UI/UX Design & Mobile Apps',
+    description:
+      'Atahastra is a digital agency specializing in web development, UI/UX design, mobile apps, and no-code solutions for startups and growing brands. One team from idea to launch.',
+    path: '/',
+  })
+
   return (
     <>
       <Reveal>
