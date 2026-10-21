@@ -6,7 +6,7 @@ import AppRoutes from './AppRoutes'
 export { PAGE_SEO, serviceSeo, SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from './data/seo'
 export { faqs } from './data/faq'
 export { services } from './data/services'
-export { CONTACT_EMAIL, CAL_BOOKING_URL } from './data/contact'
+export { CONTACT_EMAIL, JOBS_EMAIL, CAL_BOOKING_URL } from './data/contact'
 export { socialLinks } from './data/socialLinks'
 
 // Renders a route to static HTML. `prerender` waits for every lazy route / Suspense

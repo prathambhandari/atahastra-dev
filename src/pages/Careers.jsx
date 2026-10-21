@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import SocialLinks from '../components/ui/SocialLinks'
 import Reveal from '../components/ui/Reveal'
-import { CONTACT_EMAIL } from '../data/contact'
+import { JOBS_EMAIL } from '../data/contact'
 import useSeo from '../hooks/useSeo'
 import { PAGE_SEO } from '../data/seo'
 
@@ -50,26 +50,42 @@ export default function Careers() {
               We hire project by project. If you do strong work, send your
               portfolio, your role, and a short note about one shipped project to{' '}
               <a
-                href={`mailto:${CONTACT_EMAIL}`}
+                href={`mailto:${JOBS_EMAIL}`}
                 className="text-white font-mono hover:underline"
               >
-                {CONTACT_EMAIL}
+                {JOBS_EMAIL}
               </a>
               .
             </p>
 
+            <div className="mt-6 rounded-xl border border-white/[0.08] bg-[#070707] p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                Direct Application
+              </p>
+              <a
+                href={`mailto:${JOBS_EMAIL}?subject=Application%20-%20Atahastra`}
+                className="mt-2 inline-flex items-center gap-2 font-mono text-sm font-semibold text-white hover:underline"
+              >
+                <span>{JOBS_EMAIL}</span>
+                <span>↗</span>
+              </a>
+              <p className="mt-1 text-xs text-gray-500">
+                Include links to your GitHub, portfolio, or past live projects.
+              </p>
+            </div>
+
             <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href={`mailto:${JOBS_EMAIL}?subject=Application%20-%20Atahastra`}
+                className="minimal-button-primary rounded-full px-7 py-3 text-sm font-semibold"
+              >
+                Apply via email →
+              </a>
               <Link
                 to="/services"
                 className="minimal-button-secondary rounded-full px-7 py-3 text-sm font-medium"
               >
                 See our work
-              </Link>
-              <Link
-                to="/contact"
-                className="minimal-button-primary rounded-full px-7 py-3 text-sm font-semibold"
-              >
-                Get a fixed quote
               </Link>
             </div>
 
