@@ -37,12 +37,6 @@ export default function Careers() {
               to launch. You should be comfortable working directly with clients
               on websites, mobile apps, Shopify stores, and product UI.
             </p>
-            <ul className="mt-5 space-y-2 text-sm leading-relaxed text-gray-400">
-              <li>· Web developers: React, responsive builds, and page speed</li>
-              <li>· Mobile developers: React Native and store releases</li>
-              <li>· Shopify specialists: themes, migrations, and conversion</li>
-              <li>· UI designers: flows, Figma systems, and prototypes</li>
-            </ul>
           </div>
           <div>
             <h2 className="text-xl font-semibold text-white">Open inquiries</h2>
@@ -57,22 +51,6 @@ export default function Careers() {
               </a>
               .
             </p>
-
-            <div className="mt-6 rounded-xl border border-white/[0.08] bg-[#070707] p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                Direct Application
-              </p>
-              <a
-                href={`mailto:${JOBS_EMAIL}?subject=Application%20-%20Atahastra`}
-                className="mt-2 inline-flex items-center gap-2 font-mono text-sm font-semibold text-white hover:underline"
-              >
-                <span>{JOBS_EMAIL}</span>
-                <span>↗</span>
-              </a>
-              <p className="mt-1 text-xs text-gray-500">
-                Include links to your GitHub, portfolio, or past live projects.
-              </p>
-            </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
